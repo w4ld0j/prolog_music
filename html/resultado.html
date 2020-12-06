@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+    <title>PrologMusic</title>
+  </head>
+  <body
+    class="has-background-grey-dark has-text-white-ter"
+    onload="respuesta();"
+  >
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <script src="..\js\tau-prolog.js"></script>
+    <script src="..\js\index.js"></script>
+
+    <header>
+      <h1 class="title has-text-centered has-text-white-ter">Prolog Music</h1>
+    </header>
+
+    <section class="section">
+      <form action="..\index.html" method="post">
+        <div
+          class="box has-background-dark has-text-white-bis has-text-centered"
+        >
+          <h2 class="subtitle has-text-white-ter has-text-centered">
+            Aquí esta tu canción
+          </h2>
+          <div id="show_result" class="has-text-centered"></div>
+          <!-- Video -->
+          <div id="show_nanswers" class="has-text-centered"></div>
+          <!-- Respuestas -->
+          <br />
+          <div id="show_message" class="has-text-centered"></div>
+          <!-- Mensaje -->
+        </div>
+        <br />
+        <div class="has-text-centered">
+          <button onclick="" class="button is-primary">Regresar</button>
+        </div>
+      </form>
+      <br />
+      <div class="has-text-centered">
+        <button onclick="about()" class="button">Acerca de</button>
+      </div>
+    </section>
+  </body>
+</html>
