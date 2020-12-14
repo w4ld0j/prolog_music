@@ -5,91 +5,143 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <style type="text/css">
+    body{
+      height: 100vh;
+    }
+    table.center{
+    border-collapse: collapse;
+    border: 0px solid black;
+    margin-top:50px;
+    margin-left:0px ;
+    margin: 0 auto;
+   } 
+  td {
+    border: 0px solid black;
+    font-size: 20px;
+    padding-right: 10px;
+  }
+  .box{
+    padding-right: auto;
+    padding-left: auto;
+  }
+  </style>
   <title>PrologMusic</title>
 </head>
 
-<body class="has-background-grey-dark has-text-white-ter">
+<body class="has-background-grey-dark has-text-white-ter is-fullhd">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <script src="js\index.js"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-  <header>
-    <h1 class="title has-text-centered has-text-white-ter">Prolog Music</h1>
-  </header>
+  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <img src="img\logo.png" width="215" height="10">
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+          <!-- Boton Git -->
+          <a class="github-button" href="https://github.com/w4ld0j/prolog_music/" data-color-scheme="no-preference: dark; light: light; dark: dark;" 
+          data-size="large" aria-label="Download w4ld0j/prolog_music on GitHub">GitHub</a>
+          <!-- <button onclick="about()" class="button is-info">Acerca de</button> -->
+      </div>
+    </div>
+  </nav>
 
   <section class="section">
-    <!-- Section -->
     <form action="html\resultado.html" method="post">
-      <div class="box has-background-dark has-text-white-bis has-text-centered">
-
-        <h2 class="subtitle has-text-white-ter has-text-centered">¿Como te sientes?</h2>
-        <div class="control">
-          <div class="field">
-            <input class="radio" type="radio" name="p_estado" value="1" checked> Feliz ◕ ◡ ◕
-            <input class="radio" type="radio" name="p_estado" value="0"> Triste ◕︵◕
+      <div class="box has-background-dark has-text-white-bis">
+      <div class="columns is-centered"> <!-- Columnas principal -->
+        <div class="column is-one-quarter is-narrow"> <!-- Primera -->
+            <h2 class="title is-3 has-text-white-ter has-text-centered">¿Como te sientes?</h2>
+          <div class="control">
+            <div class="field has-text-centered">
+              <table class="center">
+                <tr>
+                  <td><input class="radio" type="radio" name="p_estado" value="1" checked> Feliz ◕ ◡ ◕</td>
+                  <td><input class="radio" type="radio" name="p_estado" value="0"> Triste ◕︵◕</td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <br>
-
-        <h2 class="subtitle has-text-white-ter has-text-centered">Define tu personalidad:</h2>
+        </div> <!-- Fin Primera -->
+        <div class="column is-one-quarter is-narrow"> <!-- Segunda -->
+            <h2 class="title is-3 has-text-white-ter has-text-centered">Define tu personalidad:</h2>
+            <div class="control">
+            <div class="field">
+              <table class="center">
+                <tr>
+                  <td><input class="radio" type="radio" name="p_extrover" value="1" checked> Introvertido</td>
+                  <td><input class="radio" type="radio" name="p_extrover" value="0"> Extrovertido</td>
+                </tr>
+                <tr>
+                  <td><input class="radio" type="radio" name="p_intuit" value="1" checked> Intuitivo</td>
+                  <td><input class="radio" type="radio" name="p_intuit" value="0"> Observador</td>
+                </tr>
+                <tr>
+                  <td><input class="radio" type="radio" name="p_thinker" value="1" checked> Pensador</td>
+                  <td><input class="radio" type="radio" name="p_thinker" value="0"> Emocional</td>
+                </tr>
+                <tr>
+                  <td><input class="radio" type="radio" name="p_juzga" value="1" checked> Juzgador</td>
+                  <td><input class="radio" type="radio" name="p_juzga" value="0"> Explorador</td>
+                </tr>
+              </table>
+            </div>
+            </div> 
+        </div> <!-- Fin Segunda -->
+        <div class="column is-one-quarter is-narrow"> <!-- Tercera -->
+          <h1 class="title is-3 has-text-white-ter has-text-centered">Elige un genero:</h1>
         <div class="field">
           <div class="control">
-            <input class="radio" type="radio" name="p_extrover" value="1" checked> Introvertido
-            <input class="radio" type="radio" name="p_extrover" value="0"> Extrovertido
+            <table class="center">
+              <tr>
+                <td><input class="radio" type="radio" name="p_musica" value="1" checked> Jazz</td>
+                <td><input class="radio" type="radio" name="p_musica" value="2"> Clasica</td>
+              </tr>
+              <tr>
+                <td><input class="radio" type="radio" name="p_musica" value="3"> Electronica</td>
+                <td><input class="radio" type="radio" name="p_musica" value="4"> Metal</td>
+              </tr>
+              <tr>
+                <td><input class="radio" type="radio" name="p_musica" value="5"> Rock alternativo</td>
+                <td><input class="radio" type="radio" name="p_musica" value="6"> Rock</td>
+              </tr>
+              <tr>
+                <td><input class="radio" type="radio" name="p_musica" value="7"> Punk</td>
+                <td><input class="radio" type="radio" name="p_musica" value="8"> Musica del mundo</td>
+              </tr>
+              <tr>
+                <td><input class="radio" type="radio" name="p_musica" value="8"> Blues</td>
+                <td><input class="radio" type="radio" name="p_musica" value="10"> Ambiental</td>
+              </tr>
+              <tr>
+                <td><input class="radio" type="radio" name="p_musica" value="11"> Pop</td>
+                <td><input class="radio" type="radio" name="p_musica" value="12"> Religiosa</td>
+              </tr>
+              <tr>
+                <td><input class="radio" type="radio" name="p_musica" value="13"> Hip Hop</td>
+                <td><input class="radio" type="radio" name="p_musica" value="14"> Soul</td>
+              </tr>
+              <tr>
+                <td><input class="radio" type="radio" name="p_musica" value="15"> Country</td>
+                <td><input class="radio" type="radio" name="p_musica" value="16"> Reggae</td>
+              </tr>
+            </table>
           </div>
         </div>
-        <div class="field">
-          <div class="control">
-            <input class="radio" type="radio" name="p_intuit" value="1" checked> Intuitivo
-            <input class="radio" type="radio" name="p_intuit" value="0"> Observador
-          </div>
-        </div>
-        <div class="field">
-          <div class="control">
-            <input class="radio" type="radio" name="p_thinker" value="1" checked> Pensador
-            <input class="radio" type="radio" name="p_thinker" value="0"> Emocional
-          </div>
-        </div>
-        <div class="field">
-          <div class="control">
-            <input class="radio" type="radio" name="p_juzga" value="1" checked> Juzgador
-            <input class="radio" type="radio" name="p_juzga" value="0"> Explorador
-          </div>
-        </div>
-        <br>
-        <h2 class="subtitle has-text-white-ter has-text-centered">Elige un genero:</h2>
-        <div class="field">
-          <div class="control">
-            <input class="radio" type="radio" name="p_musica" value="1" checked> Jazz
-            <input class="radio" type="radio" name="p_musica" value="2"> Clasica
-            <input class="radio" type="radio" name="p_musica" value="3"> Electronica
-            <input class="radio" type="radio" name="p_musica" value="4"> Metal
-            <input class="radio" type="radio" name="p_musica" value="5"> Rock alternativo
-            <input class="radio" type="radio" name="p_musica" value="6"> Rock
-            <input class="radio" type="radio" name="p_musica" value="7"> Punk
-            <input class="radio" type="radio" name="p_musica" value="8"> Musica del mundo
-            <br>
-            <input class="radio" type="radio" name="p_musica" value="8"> Blues
-            <input class="radio" type="radio" name="p_musica" value="10"> Ambiental
-            <input class="radio" type="radio" name="p_musica" value="11"> Pop
-            <input class="radio" type="radio" name="p_musica" value="12"> Religiosa
-            <input class="radio" type="radio" name="p_musica" value="13"> Hip Hop
-            <input class="radio" type="radio" name="p_musica" value="14"> Soul
-            <input class="radio" type="radio" name="p_musica" value="15"> Country
-            <input class="radio" type="radio" name="p_musica" value="16"> Reggae
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="has-text-centered">
+          
+        </div> <!-- Fin Tercera -->
+      </div> <!-- Fin principal -->  
+    </div>
+      <div class="buttons is-centered">
         <button onclick="save()" class="button is-primary">Enviar</button>
         <input type="reset" id="" value="Borrar" class="button is-danger">
       </div>
     </form>
-    <br>
-    <div class="has-text-centered">
-      <button onclick="about()" class="button">Acerca de</button>
-    </div>
   </section>
+  
+  
 </body>
 
 </html>
